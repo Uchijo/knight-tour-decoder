@@ -49,7 +49,22 @@ func main() {
 		})
 	}
 
+	printGrid(length)
+
+	fmt.Println("\nhistory:")
 	for _, v := range inputSlice {
 		fmt.Printf("%+v\n", v)
+	}
+}
+
+func printGrid(length int) {
+	current := 1
+	fmt.Println("grid:")
+	for inner := 0; inner < length; inner++ {
+		for outer := 0; outer < length; outer++ {
+			fmt.Printf("%3v ", current)
+			current += 1
+		}
+		fmt.Println()
 	}
 }
