@@ -32,12 +32,9 @@ func main() {
 	}
 	content := string(rawContent)
 
-	fmt.Println(content)
-
 	contents := strings.Split(content, " ")
 	inputSlice := []record{}
 	for i, v := range contents {
-		fmt.Printf("parsing %v\n", v)
 		result, _ := strconv.Atoi(v)
 		if result <= 0 {
 			continue
